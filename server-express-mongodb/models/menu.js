@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 var MenuSchema = new Schema({
   name: { type: String, required: true },
   complete: { type: Boolean, required: true }
+  
 });
 
 // Duplicate the ID field.
