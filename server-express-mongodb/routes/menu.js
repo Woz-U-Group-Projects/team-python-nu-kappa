@@ -1,6 +1,14 @@
 var express = require("express");
 var router = express.Router();
+<<<<<<< Updated upstream
 var MenuModel = require("../models/menu");
+=======
+<<<<<<< HEAD:server-express-mongodb/routes/tasks.js
+var Model_Menu = require("../models/menu");
+=======
+var Model_Menu = require("../models/menu");
+>>>>>>> 8694d1b1b979139a06b597515b2140f534661037:server-express-mongodb/routes/menu.js
+>>>>>>> Stashed changes
 
 router.get("/", function(req, res, next) {
   MenuModel.find().then(menu => res.json(menu));
