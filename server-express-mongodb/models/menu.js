@@ -19,4 +19,4 @@ MenuSchema.set("toJSON", {
   virtuals: true
 });
 
-module.exports = mongoose.model("Menu", MenuSchema);
+module.exports = mongoose.model("Task", MenuSchema);
