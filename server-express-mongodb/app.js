@@ -5,7 +5,7 @@ var logger = require("morgan");
 var cors = require("cors");
 var mongoose = require("mongoose");
 
-var tasksRouter = require("./routes/tasks");
+var menuRouter = require("./routes/menu");
 
 var app = express();
 
@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
-app.use("/tasks", tasksRouter);
+app.use("/menu", menuRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
@@ -27,5 +27,6 @@ var db = mongoose.connection;
 db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
 db.on("disconnected", () => console.log("Mongoose connection disconnected"));
 db.on("error", console.error.bind(console, "Mongoose connection error:"));
+
 
 module.exports = app;
