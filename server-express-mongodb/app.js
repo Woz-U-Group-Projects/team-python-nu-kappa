@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
-app.use("/menu", menuRouter);
+app.use('/menu', menuRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =

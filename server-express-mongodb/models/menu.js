@@ -3,7 +3,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var MenuSchema = new Schema({
+var menuSchema = new Schema({
   entree: { type: String, required: false },
   side: { type: String,  required: false },
   dessert: { type: String, required: false },
@@ -12,13 +12,13 @@ var MenuSchema = new Schema({
 });
 
 // Duplicate the ID field.
-MenuSchema.virtual("id").get(function() {
+menuSchema.virtual("id").get(function() {
   return this._id.toHexString();
 });
 
 // Ensure virtual fields are serialised.
-MenuSchema.set("toJSON", {
+menuSchema.set("toJSON", {
   virtuals: true
 });
 
-module.exports = mongoose.model("Menu", MenuSchema);
+module.exports = mongoose.model("menu", menuSchema);
