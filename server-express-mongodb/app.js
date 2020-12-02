@@ -5,7 +5,7 @@ var logger = require("morgan");
 var cors = require("cors");
 var mongoose = require("mongoose");
 
-var MenuRouter = require("./routes/menu");
+var tasksRouter = require("./routes/tasks");
 
 var app = express();
 
@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
-app.use("/menu", menuRouter);
+app.use("/tasks", tasksRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =

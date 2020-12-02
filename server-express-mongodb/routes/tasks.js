@@ -1,37 +1,36 @@
 var express = require("express");
 var router = express.Router();
-
-var Model_Menu = require("../models/menu");
+var TaskModel = require("../models/menu");
 
 router.get("/", function(req, res, next) {
-  MenuModel.find().then(menu => res.json(menu));
+  TaskModel.find().then(tasks => res.json(tasks));
 });
 
 router.post("/", function(req, res, next) {
-  let newMenu = new MenuModel();
-  newMenu.name = req.body.name;
-  newMenu.complete = req.body.complete;
-  newMenu.save().then(menu => res.json(menu));
+  let newTask = new TaskModel();
+  newTask.name = req.body.name;
+  newTask.complete = req.body.complete;
+  newTask.save().then(task => res.json(task));
 });
 
 router.delete("/:id", function(req, res, next) {
-  MenuModel.findByIdAndRemove(req.params.id, (err, menu) => {
+  TaskModel.findByIdAndRemove(req.params.id, (err, task) => {
     if (err) return res.status(400).send(err);
-    res.send(menu);
+    res.send(task);
   });
 });
 
 router.put("/:id", function(req, res, next) {
-  MenuModel.findByIdAndUpdate(
+  TaskModel.findByIdAndUpdate(
     req.params.id,
     {
       name: req.body.name,
-      complete: req.body.complete
+      complete: false
     },
     { new: true },
-    (err, menu) => {
+    (err, task) => {
       if (err) return res.status(400).send(err);
-      res.send(menu);
+      res.send(task);
     }
   );
 });
