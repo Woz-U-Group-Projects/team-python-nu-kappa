@@ -4,8 +4,12 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var MenuSchema = new Schema({
-  name: { type: String, required: true },
-  complete: { type: Boolean, required: true }
+  _id: { type: String, required: true },
+  description: { type: String, required: true },
+  price: { type: Sting, required: true },
+  entree: { type: String, required: false },
+  side: { type: String, required: false },
+  drink: { type: String, required: false }
   
 });
 
@@ -19,4 +23,4 @@ MenuSchema.set("toJSON", {
   virtuals: true
 });
 
-module.exports = mongoose.model("Task", MenuSchema);
+module.exports = mongoose.model("menu", MenuSchema);
