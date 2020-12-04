@@ -28,9 +28,9 @@ router.put("/:id", function(req, res, next) {
       complete: false
     },
     { new: true },
-    (err, task) => {
+    (err, menu) => {
       if (err) return res.status(400).send(err);
-      res.send(task);
+      res.send(menu);
     }
   );
 });
