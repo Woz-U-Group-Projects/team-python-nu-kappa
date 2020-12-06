@@ -2,10 +2,18 @@ import React from 'react';
 
 const home = () => {
     return(
+        <div>
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">WOZ-U Eats</h1>
+    <p class="lead">Welcome to our traveling food truck! Find out where we'll be next and order your favorites on the site!</p>
+  </div>
+</div>
+
         <div style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1606062622900-6c8788c2ffc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80")',
             backgroundSize: "cover",
-          height: "100vh",
+          height: "130vh",
           }}
           class="container">
         <form>
@@ -54,6 +62,7 @@ const home = () => {
   </div>
   <button type="submit" class="btn btn-primary">Sign up</button>
 </form> 
+</div>
 </div>
     );
 }

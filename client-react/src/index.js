@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './task.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import PropTypes from 'prop-types';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
