@@ -2,8 +2,12 @@ import React from 'react';
 
 const home = () => {
     return(
-
-        <div class="container">
+        <div style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1606062622900-6c8788c2ffc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80")',
+            backgroundSize: "cover",
+          height: "100vh",
+          }}
+          class="container">
         <form>
   <div class="form-row">
     <div class="form-group col-md-6">
