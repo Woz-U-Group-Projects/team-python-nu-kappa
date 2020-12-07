@@ -5,11 +5,7 @@ var logger = require("morgan");
 var cors = require("cors");
 var mongoose = require("mongoose");
 
-<<<<<<< HEAD
-var menuRouter = require("./routes/menu");
-=======
 var menusRouter = require("./routes/menus");
->>>>>>> Front-End
 
 var app = express();
 
@@ -31,6 +27,5 @@ var db = mongoose.connection;
 db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
 db.on("disconnected", () => console.log("Mongoose connection disconnected"));
 db.on("error", console.error.bind(console, "Mongoose connection error:"));
-
 
 module.exports = app;
