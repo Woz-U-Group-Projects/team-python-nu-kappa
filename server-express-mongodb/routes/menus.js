@@ -3,15 +3,27 @@ var router = express.Router();
 var MenuModel = require("../models/menu");
 
 router.get("/", function(req, res, next) {
-  MenuModel.find().then(menus => res.json(menus));
+  MenuModel.find()
+  .then(menus => res.json(menus))
+  .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.post("/", function(req, res, next) {
   let newMenu = new MenuModel();
-  newMenu.name = req.body.name;
-  newMenu.complete = req.body.complete;
-  newMenu.save().then(menu => res.json(menu));
+  newMenu.id = req.body.id;
+  newMenu.entree = req.body.entree;
+  newMenu.details = req.body.details;
+  newMenu.description = req.body.description;
+  newMenu.price = Number(req.body.price);
+  
+  newMenu.save()
+  .then(menu => res.json(menu));
 });
+
+
+
+
+
 
 router.delete("/:id", function(req, res, next) {
   MenuModel.findByIdAndRemove(req.params.id, (err, menu) => {
@@ -24,8 +36,12 @@ router.put("/:id", function(req, res, next) {
   MenuModel.findByIdAndUpdate(
     req.params.id,
     {
-      name: req.body.name,
-      complete: false
+      id:req.body.id,
+      entree:req.body.entree,
+      details: req.body.details,
+      description:req.body.description,
+      price:Number(req.body.price)
+      
     },
     { new: true },
     (err, menu) => {
