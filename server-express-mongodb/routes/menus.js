@@ -8,17 +8,18 @@ router.get("/", function(req, res, next) {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.post("/", function(req, res, next) {
-  let newMenu = new MenuModel();
-  newMenu.id = req.body.id;
-  newMenu.entree = req.body.entree;
-  newMenu.details = req.body.details;
-  newMenu.description = req.body.description;
-  newMenu.price = Number(req.body.price);
-  
+router.post("/", function(req, res,) {
+  let newMenu = new MenuModel(req.body);
   newMenu.save()
-  .then(menu => res.json(menu));
+  .then(menus => {res.json({"menu":"Menu added"});
+})
+  .catch(err => {
+    res.status(400).send("Add failed");
+  });
 });
+  
+  
+ 
 
 
 
