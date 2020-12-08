@@ -1,4 +1,5 @@
 var express = require("express");
+const menu = require("../models/menu");
 var router = express.Router();
 var MenuModel = require("../models/menu");
 
@@ -8,6 +9,7 @@ router.get("/", function(req, res, next) {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
+<<<<<<< Updated upstream
 router.post("/", function(req, res,) {
   let newMenu = new MenuModel(req.body);
   newMenu.save()
@@ -20,6 +22,19 @@ router.post("/", function(req, res,) {
   
   
  
+=======
+
+  router.post("/", function(req, res,) {
+    let newMenu = new MenuModel(req.body);
+    newMenu.save()
+    .then(menus => {res.json({"menu":"Menu added"});
+})
+    .catch(err => {
+      res.status(400).send("Add failed");
+    });
+  });
+
+>>>>>>> Stashed changes
 
 
 
