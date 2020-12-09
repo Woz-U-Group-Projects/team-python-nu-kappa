@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 var express = require('express');
+=======
+var express = require("express");
+const menu = require("../models/menu");
+>>>>>>> BackEndBranch
 var router = express.Router();
 <<<<<<< HEAD:server-express-mongodb/routes/menu.js
 
@@ -12,15 +17,28 @@ module.exports = router;
 var MenuModel = require("../models/menu");
 
 router.get("/", function(req, res, next) {
-  MenuModel.find().then(menus => res.json(menus));
+  MenuModel.find()
+  .then(menus => res.json(menus))
+  .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.post("/", function(req, res, next) {
-  let newMenu = new MenuModel();
-  newMenu.name = req.body.name;
-  newMenu.complete = req.body.complete;
-  newMenu.save().then(menu => res.json(menu));
+router.post("/", function(req, res,) {
+  let newMenu = new MenuModel(req.body);
+  newMenu.save()
+  .then(menus => {res.json({"menu":"Menu added"});
+})
+  .catch(err => {
+    res.status(400).send("Add failed");
+  });
 });
+  
+  
+ 
+
+
+
+
+
 
 router.delete("/:id", function(req, res, next) {
   MenuModel.findByIdAndRemove(req.params.id, (err, menu) => {
@@ -33,8 +51,12 @@ router.put("/:id", function(req, res, next) {
   MenuModel.findByIdAndUpdate(
     req.params.id,
     {
-      name: req.body.name,
-      complete: false
+      id:req.body.id,
+      entree:req.body.entree,
+      details: req.body.details,
+      description:req.body.description,
+      price:Number(req.body.price)
+      
     },
     { new: true },
     (err, menu) => {
