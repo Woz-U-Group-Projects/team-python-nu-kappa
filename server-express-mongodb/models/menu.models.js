@@ -14,5 +14,8 @@ let MenuSchema = new Schema({
   price:{
   type: Number
   }
+
+
+
 });
 module.exports = mongoose.model("Menu", MenuSchema);
