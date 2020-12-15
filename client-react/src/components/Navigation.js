@@ -8,6 +8,7 @@ const Navigation = () => {
             <NavLink class = "navbar-text" to ="/">Home</NavLink>
             <NavLink class = "navbar-text" to ="/FoodTruckInfo">Woz'U Eats</NavLink>
             <NavLink class = "navbar-text" to="/FoodTruckMenu">Woz'U Eats Menu</NavLink>
+            <NavLink class = "navbar-text" to="/CreateOrder">Woz U Order Creation</NavLink>
         </nav>
     );
 }
