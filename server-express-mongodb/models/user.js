@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-var AdminSchema = new Schema({
+var UserSchema = new Schema({
 name: {
     type: String,
     required: true,
@@ -12,4 +12,4 @@ type:String,
 required:true
 },
 });
-module.exports = mongoose.model("Admin", AdminSchema);
+module.exports = mongoose.model("User", UserSchema);
