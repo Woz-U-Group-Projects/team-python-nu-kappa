@@ -2,7 +2,10 @@
 var express = require('express');
 =======
 var express = require("express");
+<<<<<<< HEAD
 const menu = require("../models/menu");
+>>>>>>> BackEndBranch
+=======
 >>>>>>> BackEndBranch
 var router = express.Router();
 <<<<<<< HEAD:server-express-mongodb/routes/menu.js
@@ -34,10 +37,6 @@ router.post("/", function(req, res,) {
   
   
  
-
-
-
-
 
 
 router.delete("/:id", function(req, res, next) {

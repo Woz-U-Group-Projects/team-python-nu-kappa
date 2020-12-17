@@ -1,21 +1,21 @@
 var express = require('express');
 var router = express.Router();
-var AdminModel = require("../models/admin");
+var UserModel = require("../models/user");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  AdminModel.find()
-    .then(admins => res.json(admins))
+  UserModel.find()
+    .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
   
 });
 
 
 router.post("/", function(req, res, next) {
-  let newAdmin = new AdminModel();
-  newAdmin.name = req.body.name;
-  newAdmin.complete = req.body.complete;
-  newAdmin.save().then(admin => res.json(admin));
+  let newUser = new UserModel();
+  newUser.name = req.body.name;
+  newUser.complete = req.body.complete;
+  newUser.save().then(user => res.json(user));
   });
    
 

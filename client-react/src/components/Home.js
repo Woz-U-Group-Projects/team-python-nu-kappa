@@ -44,6 +44,7 @@ const home = () => {
       <label for="inputState">State</label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
+<<<<<<< HEAD
         <option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -95,6 +96,9 @@ const home = () => {
 	<option value="WV">West Virginia</option>
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
+=======
+        <option>...</option>
+>>>>>>> BackEndBranch
       </select>
     </div>
     <div class="form-group col-md-2">
@@ -111,6 +115,7 @@ const home = () => {
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign up</button>
+<<<<<<< HEAD
 <br></br>
 <br></br>
 <p><h4>Already have account?</h4></p>
@@ -127,6 +132,8 @@ const home = () => {
   </div>
 
   <button type="submit" class="btn btn-primary"> Sign in Here!</button>
+=======
+>>>>>>> BackEndBranch
 </form> 
 </div>
 </div>

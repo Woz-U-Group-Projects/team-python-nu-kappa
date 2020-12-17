@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import axios from "axios";
 import '../task.min.css';
 
@@ -97,3 +98,16 @@ class FoodTruckMenu extends React.Component {
 
 
 export default menu;
+=======
+
+const FoodTruckMenu = () => {
+    return (
+        <div>
+            <h1>Food Truck Menu</h1>
+            <p>Menu Items and prices</p>
+        </div>
+    );
+}
+
+export default FoodTruckMenu;
+>>>>>>> BackEndBranch
