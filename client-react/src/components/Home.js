@@ -111,6 +111,22 @@ const home = () => {
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign up</button>
+<br></br>
+<br></br>
+<p><h4>Already have account?</h4></p>
+
+  <div class="form-row"> 
+    <div class="form-group col-md-6">
+      <label for="inputEmail4"></label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email"></input>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4"></label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password"></input>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary"> Sign in Here!</button>
 </form> 
 </div>
 </div>
