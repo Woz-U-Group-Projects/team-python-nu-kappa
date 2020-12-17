@@ -5,6 +5,8 @@ import Home from './components/Home';
 import FoodTruckInfo from './components/FoodTruckInfo';
 import FoodTruckMenu from './components/FoodTruckMenu';
 import CreateOrder from './components/CreateOrder';
+import CartItems from './components/CartItems';
+
 import Error from './components/Error';
 import Navigation from './components/Navigation';
 import "./task.min.css";
@@ -22,6 +24,9 @@ class App extends Component {
           <Route path="/FoodTruckInfo" component={FoodTruckInfo}/>
           <Route path="/FoodTruckMenu" component={FoodTruckMenu}/>
           <Route path="/CreateOrder" component={CreateOrder}/>
+          <Route path="/CartItems" component={CartItems}/>
+          
+          
           <Route component={Error}/>
         </Switch>
         
