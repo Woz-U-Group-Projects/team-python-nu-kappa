@@ -1,19 +1,5 @@
-<<<<<<< HEAD
 var express = require('express');
-=======
-var express = require("express");
-const menu = require("../models/menu");
->>>>>>> BackEndBranch
 var router = express.Router();
-<<<<<<< HEAD:server-express-mongodb/routes/menu.js
-
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-module.exports = router;
-=======
 var MenuModel = require("../models/menu");
 
 router.get("/", function(req, res, next) {
@@ -67,4 +53,3 @@ router.put("/:id", function(req, res, next) {
 });
 
 module.exports = router;
->>>>>>> Front-End:server-express-mongodb/routes/menus.js
