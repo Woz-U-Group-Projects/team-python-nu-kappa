@@ -2,7 +2,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 let MenuSchema = new Schema({
-  entree: {
+  foods: {
     type: String
   },
   details:{
@@ -14,5 +14,8 @@ let MenuSchema = new Schema({
   price:{
   type: Number
   }
+
+
+
 });
 module.exports = mongoose.model("Menu", MenuSchema);

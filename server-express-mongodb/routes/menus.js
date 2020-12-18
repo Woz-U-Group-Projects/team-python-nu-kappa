@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 var MenuModel = require("../models/menu");
 
@@ -20,10 +20,6 @@ router.post("/", function(req, res,) {
   
   
  
-
-
-
-
 
 
 router.delete("/:id", function(req, res, next) {
