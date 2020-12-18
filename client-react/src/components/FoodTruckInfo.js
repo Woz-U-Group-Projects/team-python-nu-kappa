@@ -7,9 +7,10 @@ const FoodTruckInfo = () => {
         <div className="FoodTruckInfo">
          <h1>Image</h1>
 
-         <img src="pink-food-truck_23-2147529454.jpg" class="stretch"></img>
-       
+         <img src="WozUMap.png" width="700" height="500"></img>
+        <p>testing</p>
         </div>
+        
     );
 }
 
