@@ -6,12 +6,13 @@ import React, { Component, useState } from 'react';
 import CreateOrder from '../components/CreateOrder';
 
 
-const CartItems = () => {
+
+function CartItems () {
     return(
         <div className="CartItems">
-         <h1>Image</h1>
+         <h1>Added to Cart</h1>
 
-         <img src="pink-food-truck_23-2147529454.jpg" class="stretch"></img>
+         
        
         </div>
     );
