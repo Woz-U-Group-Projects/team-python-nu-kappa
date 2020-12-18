@@ -11,7 +11,6 @@ import Error from './components/Error';
 import Navigation from './components/Navigation';
 import "./task.min.css";
 
-
 class App extends Component {
   render() {
     return (

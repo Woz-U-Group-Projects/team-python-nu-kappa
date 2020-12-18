@@ -6,7 +6,7 @@ var cors = require("cors");
 var mongoose = require("mongoose");
 
 var menusRouter = require("./routes/menus");
-var adminsRouter = require("./routes/admins");
+var usersRouter = require("./routes/users");
 
 var app = express();
 
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.use("/menus", menusRouter);
-app.use("/admins", adminsRouter);
+app.use("/users", usersRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
